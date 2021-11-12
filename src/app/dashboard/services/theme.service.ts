@@ -14,7 +14,6 @@ export class ThemeService {
   private activeIndex: number = 0;
   changeActiveTheme(type): void {
     // we are using modulus to traverse array in circular fashion.
-    // this.activeIndex = (this.activeIndex + 1) %  this.availableThemes.length;
     this.activeIndex = type;
     console.log("activeIndex",this.activeIndex)
     this.active = this.availableThemes[this.activeIndex];
