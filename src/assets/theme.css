@@ -23,6 +23,7 @@ body {
 
 .block-wrapper {
   width: 960px;
+  margin: 0 auto;
 }
 
 .text-theme {
@@ -53,21 +54,21 @@ body {
 
 .toggle-control input:checked ~ .control::before {
   background: #0e1340;
-  left: 39px;
+  left: 28px;
   transform: scale(1);
 }
 
 .toggle-control input:checked ~ .control::after {
   background: white;
-  left: 55px;
+  left: 35px;
 }
 
 .toggle-control .control {
   position: absolute;
   top: 0;
   left: 0;
-  height: 50px;
-  width: 100px;
+  width: 60px;
+  height: 28px;
   border-radius: 25px;
   background-color: #68c7fe;
   transition: background-color .125s ease-in;
@@ -76,10 +77,10 @@ body {
 .toggle-control .control::before {
   content: "";
   position: absolute;
-  width: 40px;
-  height: 40px;
+  width: 18px;
+  height: 18px;
   left: 0px;
-  top: 0px;
+  top: 2px;
   border-radius: 50%;
 
   transform: scale(0);
@@ -95,8 +96,8 @@ body {
   position: absolute;
   left: 5px;
   top: 5px;
-  width: 40px;
-  height: 40px;
+  width: 18px;
+  height: 18px;
   border-radius: 50%;
   background: #fff89e;
   transition: all .125s ease-in;
