@@ -10,7 +10,7 @@ import { theme1 } from 'src/app/models/theme';
 })
 export class WeatherHomeComponent implements OnInit {
   private nightMode:boolean = false;
-  public places:object = {};
+  public cities:Array<any> = [];
 
   constructor(
     private _themeService: ThemeService,
@@ -36,7 +36,11 @@ export class WeatherHomeComponent implements OnInit {
     };
     this._weatherService.searchPlaces(data).subscribe(res => {
       console.log("res",res);
-      this.places = res;
+      this.cities = res["hits"].filter((item: any) => item.is_city)
+      .map((i: any) => {
+        return i.locale_names[0] + ', ' + i.country;
+      });
+      console.log("cities",this.cities);
     })
   }
 
