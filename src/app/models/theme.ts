@@ -24,7 +24,7 @@ export interface Theme {
     '--card-color': '#051a33',
     '--title-color': '#5f8bbf',
     '--header-color': '#648cba',
-    '--color-option-1': '#396bae',
+    '--color-option-1': '#2E3D4D',
     '--color-option-2': '#7b98b2',
     '--color-option-3': '#496fa1',
     '--color-option-4': '#3885ca',

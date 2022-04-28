@@ -26,8 +26,16 @@ body {
   margin: 0 auto;
 }
 
+.header-text {
+  color: var(--title-color);
+}
+
 .text-theme {
   color: var(--color-option-2);
+}
+
+.search-result-text {
+  color: var(--color-option-1);
 }
 
 .toggle-control {

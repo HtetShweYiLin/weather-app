@@ -1,4 +1,6 @@
 <input class="search" (keyup)="onKeyup($event)">
-<div *ngFor="let city of cities">
-  {{ city }}
+<div *ngIf="cities?.length > 0" class="search-result-wrapper">
+  <div *ngFor="let city of cities" class="search-result search-result-text">
+    {{ city }}
+  </div>
 </div>

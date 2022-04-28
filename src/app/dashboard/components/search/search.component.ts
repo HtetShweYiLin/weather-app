@@ -18,7 +18,12 @@ export class SearchComponent implements OnInit {
 
   onKeyup($event) {
     this.value = $event.target.value;
-    this.keyup.emit($event);
+    console.log("value",this.value);
+    if(this.value) {
+      this.keyup.emit($event);
+    }else {
+      this.cities = [];
+    }
   }
 
 }

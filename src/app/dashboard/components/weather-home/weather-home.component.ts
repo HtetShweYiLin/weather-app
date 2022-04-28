@@ -34,14 +34,16 @@ export class WeatherHomeComponent implements OnInit {
       "query": searchValue,
       "type": "city"
     };
-    this._weatherService.searchPlaces(data).subscribe(res => {
-      console.log("res",res);
-      this.cities = res["hits"].filter((item: any) => item.is_city)
-      .map((i: any) => {
-        return i.locale_names[0] + ', ' + i.country;
-      });
-      console.log("cities",this.cities);
-    })
+    if(searchValue) {
+      this._weatherService.searchPlaces(data).subscribe(res => {
+        console.log("res",res);
+        this.cities = res["hits"].filter((item: any) => item.is_city)
+        .map((i: any) => {
+          return i.locale_names[0] + ', ' + i.country;
+        });
+        console.log("cities",this.cities);
+      })
+    }
   }
 
 }
