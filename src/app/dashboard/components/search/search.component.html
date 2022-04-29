@@ -1,6 +1,6 @@
-<input class="search" (keyup)="onKeyup($event)">
+<input class="search" (keyup.enter)="onEnter($event)">
 <div *ngIf="cities?.length > 0" class="search-result-wrapper">
-  <div *ngFor="let city of cities" class="search-result search-result-text">
+  <div *ngFor="let city of cities" class="search-result search-result-text" (click)="onClickSearchResult(city)">
     {{ city }}
   </div>
 </div>

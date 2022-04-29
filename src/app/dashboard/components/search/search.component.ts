@@ -8,6 +8,8 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class SearchComponent implements OnInit {
   @Input() cities;
   @Output() keyup = new EventEmitter<any>();
+  @Output() search = new EventEmitter<any>();
+  @Output() clickSearchResult = new EventEmitter<any>();
 
   public value:string;
 
@@ -19,11 +21,15 @@ export class SearchComponent implements OnInit {
   onKeyup($event) {
     this.value = $event.target.value;
     console.log("value",this.value);
-    if(this.value) {
-      this.keyup.emit($event);
-    }else {
-      this.cities = [];
-    }
+    this.keyup.emit($event);
+  }
+
+  onEnter($event) {
+    this.search.emit($event);
+  }
+
+  onClickSearchResult(data) {
+    this.clickSearchResult.emit(data);
   }
 
 }

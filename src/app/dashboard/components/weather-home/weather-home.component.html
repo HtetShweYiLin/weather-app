@@ -1,7 +1,7 @@
 <div class="w-100 h-100 weather-home-wrapper">
     <div class="block-wrapper">
       <app-header-bar (onChangeTheme)="changeTheme($event)"></app-header-bar>
-      <app-search [cities]="cities" (keyup)="searchPlaces($event)"></app-search>
+      <app-search [cities]="cities" (search)="searchPlaces($event)" (clickSearchResult)="selectPlace($event)"></app-search>
       <app-current-weather></app-current-weather>
       <app-extended-forecast></app-extended-forecast>
     </div>

@@ -43,7 +43,25 @@ export class WeatherHomeComponent implements OnInit {
         });
         console.log("cities",this.cities);
       })
+    }else {
+      this.cities = [];
     }
+  }
+
+  clearSearch() {
+    this.cities = [];
+  }
+
+  selectPlace(city) {
+    console.log("selectPlace",city);
+    this.clearSearch();
+    this.getPlaceWeather(city);
+  }
+
+  getPlaceWeather(city) {
+    this._weatherService.getWeather(city).subscribe(res => {
+      console.log("getPlaceWeather res",res);
+    })
   }
 
 }

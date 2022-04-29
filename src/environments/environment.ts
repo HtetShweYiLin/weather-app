@@ -4,7 +4,9 @@
 
 export const environment = {
   production: false,
-  placesApiUrl: "https://places-dsn.algolia.net"
+  placesApiUrl: "https://places-dsn.algolia.net",
+  weatherApiKey: "826eae01efc7aa864e4a26f60eb6a55b",
+  weatherApiUrl: "http://api.openweathermap.org/"
 };
 
 /*
