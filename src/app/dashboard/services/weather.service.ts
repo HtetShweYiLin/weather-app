@@ -28,7 +28,8 @@ export class WeatherService {
   }
 
   getWeather(city) {
-    let url = this.weatherApiUrl + 'weather?q=' + city + '&APPID=' + this.api_key;
+    let url = this.weatherApiUrl + 'weather?q=London&APPID=' + this.api_key;
+    // let url = this.weatherApiUrl + 'weather?q=' + city + '&APPID=' + this.api_key;
     const httpOptions = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
